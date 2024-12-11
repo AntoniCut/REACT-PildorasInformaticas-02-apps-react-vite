@@ -8,7 +8,6 @@ import reactLogo from '../assets/react.svg';
 import viteLogo from '../../public/vite.svg';
 
 
-
 export const Header = () => {
 
     return (
@@ -24,7 +23,6 @@ export const Header = () => {
             <a href="https://react.dev" target="_blank">
                 <img src={reactLogo} className="logo react" alt="React logo" />
             </a>
-
 
         </header>
     )
