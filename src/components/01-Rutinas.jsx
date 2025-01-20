@@ -6,19 +6,18 @@
 
 import { useState } from 'react';
 import { trabajosData } from '../data/rutinas';
+import { Row, ImagenSeleccionada} from '../styled-components/styled';
 
 
 export const Rutinas = () => {
     
     const [trabajoActual, setTrabajoActual] = useState(0);
-    const [imagenSeleccionada, setImagenSeleccionada] = useState(null); // Estado para la imagen seleccionada
+    const [ejercicioActual, setEjercicioActual] = useState(0);
+    //const [imagenSeleccionada, setImagenSeleccionada] = useState(null); // Estado para la imagen seleccionada
 
     const trabajo = trabajosData[trabajoActual];
 
-    const renderImg = (img) => {
-        setImagenSeleccionada(img); // Actualiza el estado con la imagen seleccionada
-    };
-
+    
     return (
         
         <div className="rutinas__container">
@@ -27,35 +26,28 @@ export const Rutinas = () => {
             
             <h3> {trabajo.titulo} </h3>
 
-            <div className="rutinas__imagenes">
+            <Row>
                 {
-                    trabajo.rutina.map((ejercicio) => (
+                    trabajo.rutina.map((ejercicio, indice) => (
                         <img
-                            className="imagen__ejercicio"
                             key={ejercicio.ejercicio}
                             src={ejercicio.img}
                             alt={ejercicio.ejercicio}
-                            onClick={() => renderImg(ejercicio.img)} // Pasa la imagen seleccionada
+                            onClick={() => setEjercicioActual(indice)}
                         />
                     ))
                 }
 
-            </div>
+            </Row>
 
-
-            <div className="render__imagen">
+            <ImagenSeleccionada>
                 
-                {
-                    imagenSeleccionada ? (
-                        <img
-                            src={imagenSeleccionada}
-                            alt="Ejercicio seleccionado"
-                            className="imagen__seleccionada"
-                    />) 
-                    : ( <p> Haz clic en una imagen para verla aquí </p> )
-                }
-
-            </div>
+                <img 
+                    src={trabajo.rutina[ejercicioActual].img} 
+                    alt={trabajo.rutina[ejercicioActual].alt} />
+                    
+            </ImagenSeleccionada>
+        
 
         </div>
 

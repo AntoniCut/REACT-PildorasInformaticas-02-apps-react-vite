@@ -55,24 +55,3 @@ body {
     margin: 50px;
     color: black;
 }
-
-.rutinas__imagenes {
-    display: flex;
-    gap: 20px;
-}
-
-.imagen__ejercicio {
-    width: 100px;
-    height: 100px;
-    /* image-rendering: pixelated; */
-}
-
-.render__imagen {
-    width: 300px;
-    height: 300px;
-}
-
-.imagen__seleccionada {
-    width: 100%;
-    height: 100%;
-}
