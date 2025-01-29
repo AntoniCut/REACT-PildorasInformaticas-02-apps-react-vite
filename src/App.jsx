@@ -5,7 +5,9 @@
 
 
 import { Routes, Route } from 'react-router-dom';
-import { Header, NavBarLink, Rutinas } from "./components"
+import { Header } from "@components/Header";
+import { NavBarLink } from "@components/NavBarLink";
+import { Rutinas } from "@components/01-Rutinas";
 
 
 

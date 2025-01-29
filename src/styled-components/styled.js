@@ -34,6 +34,7 @@ export const ImagenSeleccionada=styled.div`
     width: 300px;
     height: 300px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
@@ -43,6 +44,16 @@ export const ImagenSeleccionada=styled.div`
         height: 100%;
         border: 3px solid blue;
         border-radius: 10px;
+    }
+
+    .info-descripcion h3 {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    .info-descripcion p {
+        font-size: 10px;
+        margin: 3px 0;
     }
 
 `;

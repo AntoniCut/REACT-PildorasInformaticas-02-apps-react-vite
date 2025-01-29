@@ -6,24 +6,24 @@
 
 import { useState } from 'react';
 import { trabajosData } from '../data/rutinas';
-import { Row, ImagenSeleccionada} from '../styled-components/styled';
+import { Row, ImagenSeleccionada } from '../styled-components/styled';
 
 
 export const Rutinas = () => {
-    
+
     const [trabajoActual, setTrabajoActual] = useState(0);
     const [ejercicioActual, setEjercicioActual] = useState(0);
     //const [imagenSeleccionada, setImagenSeleccionada] = useState(null); // Estado para la imagen seleccionada
 
     const trabajo = trabajosData[trabajoActual];
 
-    
+
     return (
-        
+
         <div className="rutinas__container">
-            
+
             <h2> Trabajos de Entrenamiento </h2>
-            
+
             <h3> {trabajo.titulo} </h3>
 
             <Row>
@@ -41,13 +41,20 @@ export const Rutinas = () => {
             </Row>
 
             <ImagenSeleccionada>
-                
-                <img 
-                    src={trabajo.rutina[ejercicioActual].img} 
-                    alt={trabajo.rutina[ejercicioActual].alt} />
-                    
+
+                <img
+                    src={trabajo.rutina[ejercicioActual].img}
+                    alt={trabajo.rutina[ejercicioActual].alt}
+                />
+
+                <div className="info-descripcion">
+                    <h3> {trabajo.rutina[ejercicioActual].ejercicio} </h3>
+                    <p> {trabajo.rutina[ejercicioActual].reps} repeticiones </p>
+                </div>
+
             </ImagenSeleccionada>
-        
+
+
 
         </div>
 

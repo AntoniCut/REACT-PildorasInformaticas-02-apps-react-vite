@@ -17,7 +17,7 @@ export const trabajosData = [
             {
                 "ejercicio": "Puente",
                 "img": puente,
-                "reps": 15
+                "reps": 30
             },
             {
                 "ejercicio": "Sentadillas",
@@ -27,7 +27,7 @@ export const trabajosData = [
             {
                 "ejercicio": "Laterales",
                 "img": laterales,
-                "reps": 15
+                "reps": 20
             }
         ],
         
